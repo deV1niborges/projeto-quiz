@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Interativo</title>
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: #114d88c7; 
+            padding-top: 50px; 
+        }
+
+        h1 {
+          text-align: center;
+        }
+        
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.014);
+        }
+
+        .choice:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        #next {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff; 
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #next:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="quiz-container">
@@ -14,12 +56,16 @@
         <p id="wrong">Erros: 0</p>
         <p id="question"></p>
         <div id="choices">
-          <button id="choice1" class="choice"></button>
-          <button id="choice2" class="choice"></button>
-          <button id="choice3" class="choice"></button>
-          <button id="choice4" class="choice"></button>
+          <button id="choice1" class="choice btn btn-light"></button>
+          <button id="choice2" class="choice btn btn-light"></button>
+          <button id="choice3" class="choice btn btn-light"></button>
+          <button id="choice4" class="choice btn btn-light"></button>
         </div>
-        <button id="next">Próxima</button>
+        <button id="next" class="btn btn-primary">Próxima</button>
       </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
